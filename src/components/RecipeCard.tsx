@@ -3,7 +3,7 @@ import type { Meal } from '../types/index';
 
 //card for displaying meal info
 export const RecipeCard = ({ meal }: { meal: Meal }) => {
-    <Link to={`/recipe/${meal.idMeal}`} className="group">
+    return <Link to={`/recipe/${meal.idMeal}`} className="group">
         <div className="bg-white rounded-xl shadow-sm border overflow-hidden hover:shadow-lg transition-all duration-300 transform group-hover:-translate-y-1">
             <img
                 src={meal.strMealThumb}
