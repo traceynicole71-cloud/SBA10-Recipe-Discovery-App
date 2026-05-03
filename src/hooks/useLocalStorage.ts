@@ -10,14 +10,14 @@ export function useLocalStorage<T>(key: string, initialValue: T) {
             return initialValue;
         }
     });
-};
 
-useEffect(() => {
-    try {
-        window.localStorage.setItem(key, JSON.stringify(storedValue));
-    } catch (error) {
-        console.error(error);
-    }
-}, [key, storedValue]);
+    useEffect(() => {
+        try {
+            window.localStorage.setItem(key, JSON.stringify(storedValue));
+        } catch (error) {
+            console.error(error);
+        }
+    }, [key, storedValue]);
 
-return [storedValue, setStoredValue] as const;
+    return [storedValue, setStoredValue] as const;
+}
