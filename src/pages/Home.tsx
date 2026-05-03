@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useFetch } from '../hooks/useFetch';
-import { ApiResponse, Category, Spinner } from '../components/Spinner';
+import { Spinner } from '../components/Spinner';
+import type { ApiResponse, Category } from '../types/index';
 import { ErrorMessage } from '../components/ErrorMessage';
 
 export const Home = () => {
