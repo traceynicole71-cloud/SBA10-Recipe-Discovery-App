@@ -9,5 +9,24 @@ import { SearchResults} from './pages/SearchResults';
 import './App.css'
 
 function App() {
-  
-export default App
+  return (
+    <FavoritesProvider>
+      <BrowserRouter>
+      <div className="min-h-screen bg-gray-50 font-sans antialiased text-gray-900">
+        <Navbar />
+        <div className="container mx-auto px-4 py-8">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/category/:categoryName" element={<Category />} />
+            <Route path="/recipe/:recipeId" element={<RecipeDetail />} />
+            <Route path="/favorites" element={<Favorites />} />
+            <Route path="/search" element={<SearchResults />} />
+            </Routes>
+            </div>
+            </div>
+            </BrowserRouter>
+    </FavoritesProvider>
+  );
+}
+
+export default App;
