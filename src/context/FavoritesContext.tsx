@@ -11,7 +11,7 @@ interface FavoritesContextType {
 
 const FavoritesContext = createContext<FavoritesContextType | undefined>(undefined);
 //manages global list of recipes
-export const FavoriteProvider = ({ children }: { children: ReactNode }) => {
+export const FavoritesProvider = ({ children }: { children: ReactNode }) => {
     const [favorites, setFavorites] = useLocalStorage<string[]>('my_favorites', [])
 
     const addToFavorites = (id: string) => {

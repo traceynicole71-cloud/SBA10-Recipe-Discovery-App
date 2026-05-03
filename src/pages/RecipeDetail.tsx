@@ -5,7 +5,7 @@ import type { ApiResponse, Meal } from '../types/index';
 import { Spinner } from '../components/Spinner';
 
 export const RecipeDetail = () => {
-    const { reacipeId } = useParams();
+    const { recipeId } = useParams();
     const { isFavorite, addToFavorites, removeFromFavorites } = useFavorites();
     const { data, loading } = useFetch<ApiResponse<Meal>>(`http://www.themealdb.com/api/json/v1/1/lookup.php?i=${recipeId}`);
 
