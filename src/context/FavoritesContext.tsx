@@ -1,4 +1,4 @@
-import React, { createContext, useContext } from 'react';
+import { createContext, useContext } from 'react';
 import type { ReactNode } from 'react';
 import { useLocalStorage } from '../hooks/useLocalStorage';
 
@@ -10,7 +10,7 @@ interface FavoritesContextType {
 }
 
 const FavoritesContext = createContext<FavoritesContextType | undefined>(undefined);
-
+//manages global list of recipes
 export const FavoriteProvider = ({ children }: { children: ReactNode }) => {
     const [favorites, setFavorites] = useLocalStorage<string[]>('my_favorites', [])
 
