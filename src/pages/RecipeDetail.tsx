@@ -7,7 +7,7 @@ import { Spinner } from '../components/Spinner';
 export const RecipeDetail = () => {
     const { recipeId } = useParams();
     const { isFavorite, addToFavorites, removeFromFavorites } = useFavorites();
-    const { data, loading } = useFetch<ApiResponse<Meal>>(`http://www.themealdb.com/api/json/v1/1/lookup.php?i=${recipeId}`);
+    const { data, loading } = useFetch<ApiResponse<Meal>>(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${recipeId}`);
 
     if (loading) return <Spinner />;
     const meal = data?.meals?.[0];
