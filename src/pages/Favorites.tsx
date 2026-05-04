@@ -29,7 +29,7 @@ export const Favorites = () => {
 
     return (
         <div>
-            h=<h1 className="text-3xl font-bold mb-8">My Favorites</h1>
+            <h1 className="text-3xl font-bold mb-8">My Favorites</h1>
             {favoriteMeals.length === 0 ? (
                 <p className="text-gray-500 italic">No favorites have been added. Go explore recipes!</p>
             ) : (
