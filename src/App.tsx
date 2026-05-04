@@ -12,7 +12,7 @@ function App() {
   return (
     <FavoritesProvider>
       <BrowserRouter>
-      <div className="min-h-screen bg-gray-50 font-sans antialiased text-gray-900">
+      <div className="min-h-screen bg-gray-400 font-sans antialiased text-gray-900">
         <Navbar />
         <div className="container mx-auto px-4 py-8">
           <Routes>

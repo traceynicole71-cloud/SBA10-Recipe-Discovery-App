@@ -14,21 +14,21 @@ export const Navbar = () => {
     };
 
     return (
-        <nav className="bg-orange-600 text-white shadow-lg sticky top-0 z-50">
+        <nav className="bg-gray-700 text-white shadow-lg sticky top-0 z-50">
             <div className="container mx-auto px-4 py-3 flex flex-wrap justify-between items-center">
-                <Link to="/" className="text-2xl font-bold tracking-tight">RecipeDiscovery</Link>
+                <Link to="/" className="text-2xl font-bold tracking-tight text-green-400">Recipe Discovery</Link>
 
                 <form onSubmit={handleSearch} className="flex-1 max-w-md mx-4">
                     <input
                     type="text"
-                    className="w-full px-4 py-2 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-orange-300"
+                    className="w-full px-4 py-2 rounded-lg text-white placeholder-white bg-gray-600 focus:outline-none focus:ring-2 focus:ring-pink-300"
                         placeholder="Search recipes..."
                         value={query}
                         onChange={(e) => setQuery(e.target.value)}
                         />
                 </form>
 
-                <Link to="/favorites" className="hover:text-orange-200 font-semibold">Favorites</Link>
+                <Link to="/favorites" className="text-green-400 hover:text-green-300 font-semibold">Favorites</Link>
             </div>
         </nav>
     );

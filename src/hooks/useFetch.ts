@@ -7,6 +7,7 @@ export function useFetch<T>(url: string) {
     const [error, setError] = useState<string | null>(null);
 
     useEffect(() => {
+        console.log("Fetching from:", url);
         const fetchData = async () => {
             setLoading(true);
             try {
