@@ -16,4 +16,4 @@ export const RecipeCard = ({ meal }: { meal: Meal }) => {
 </div>
         </div>
     </Link>
-};
+}; 

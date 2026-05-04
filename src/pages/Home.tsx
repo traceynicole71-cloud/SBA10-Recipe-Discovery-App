@@ -17,8 +17,8 @@ export const Home = () => {
                 {data?.categories?.map((cat) => (
                     <Link key={cat.idCategory} to={`/category/${cat.strCategory}`} className="relative group overflow-hidden rounded-2xl shadow-md border-2 border-green-600">
                 <img src={cat.strCategoryThumb} alt={cat.strCategory} className="w-full h-40 object-cover group-hover:scale-110 transition duration-300" />
-                <div className="absolute inset-0 bg-pink-400 bg-opacity-60 flex items-center justify-center">
-                    <span className="text-gray-900 font-bold text-xl">{cat.strCategory}</span>
+                <div className="absolute inset-0 bg-white bg-opacity-60 flex items-center justify-center">
+                    <span className="text-black font-bold text-xl">{cat.strCategory}</span>
                     </div>
                     </Link>
                 ))}
